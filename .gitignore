@@ -1,12 +1,13 @@
 # Virtual Environment
+agentic_analyst/
 venv/
-env/
 .env
 
-# Python Cache
+# Python cache
 __pycache__/
 *.pyc
 
-# OS Files
-.DS_Store
-Thumbs.db
+# Streamlit & Plots
+.streamlit/
+cache/
+plot_*.png
