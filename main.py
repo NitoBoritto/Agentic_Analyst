@@ -229,7 +229,11 @@ If the user asks for a pairplot or 'all relationships':
 """
 
 if uploaded_file:
-    df = pd.read_csv(uploaded_file)
+    @st.cache_data
+    def load_data(file):
+        return pd.read_csv
+    
+    df = load_data(uploaded_file)
     
     # Metadata & Metrics
     with st.sidebar:
@@ -322,9 +326,9 @@ if uploaded_file:
                         allow_dangerous_code = True,
                         handle_parsing_errors = True,
                         prefix = custom_prefix,
-                        max_iterations=5,          
-                        max_execution_time=30.0,   
-                        include_df_in_prompt=True  
+                        max_iterations = 3,          
+                        max_execution_time = 30.0,   
+                        include_df_in_prompt = False  
                     )
                     
                     response = agent.run(active_prompt, callbacks=[st_callback])
