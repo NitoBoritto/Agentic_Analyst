@@ -231,7 +231,7 @@ If the user asks for a pairplot or 'all relationships':
 if uploaded_file:
     @st.cache_data
     def load_data(file):
-        return pd.read_csv
+        return pd.read_csv(file)
     
     df = load_data(uploaded_file)
     
