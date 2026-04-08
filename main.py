@@ -211,12 +211,14 @@ dataframe 'df' and provide insights or visualizations.
 6. ATOMIC PLOTTING: You MUST perform all plotting steps (figure creation, plotting, and st.pyplot) in ONE single Action Input block to avoid empty canvases. Always use: st.pyplot(plt.gcf(), use_container_width=False)
 
 ### MANDATORY IMPORTS:
-Every 'Action Input' containing code MUST start with:
+EVERY single 'Action Input' block MUST start with these exact imports (no exceptions):
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-plt.clf() # Clear previous figures to prevent white plots
+plt.clf()
+
+Then write your code after. NEVER skip imports, NEVER assume they're already loaded.
 
 ### PAIRPLOT PROTOCOL:
 If the user asks for a pairplot or 'all relationships':
