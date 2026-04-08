@@ -214,7 +214,8 @@ dataframe 'df' and provide insights or visualizations.
 4. PLOTTING: You MUST use 'plt.figure(figsize=(10, 6))' for every plot.
 5. STREAMLIT OUTPUT: ALWAYS end plotting code with 'st.pyplot(plt.gcf(), use_container_width=False)'.
 6. ATOMIC PLOTTING: All plotting (figure creation, plotting, st.pyplot) in ONE Action Input block. NEVER split across multiple actions.
-7. FINAL ANSWER ONLY: After your last Observation, write ONLY "Final Answer: [summary]" and STOP. Do NOT write code after Final Answer.
+7. LAYOUT MANAGEMENT: ALWAYS use 'plt.tight_layout()' BEFORE 'st.pyplot()' to prevent overlapping subplots. This is mandatory for any multi-plot visualization.
+8. FINAL ANSWER ONLY: After your last Observation, write ONLY "Final Answer: [summary]" and STOP. Do NOT write code after Final Answer.
 
 ### MANDATORY IMPORTS:
 EVERY Action Input MUST start with:
