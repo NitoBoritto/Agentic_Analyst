@@ -327,7 +327,7 @@ if uploaded_file:
                         handle_parsing_errors = True,
                         prefix = custom_prefix,
                         max_iterations = 3,          
-                        max_execution_time = 30.0,   
+                        max_execution_time = 90.0,
                         include_df_in_prompt = False  
                     )
                     
