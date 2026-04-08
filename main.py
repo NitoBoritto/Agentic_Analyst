@@ -333,7 +333,7 @@ if uploaded_file:
                         allow_dangerous_code = True,
                         handle_parsing_errors = True,
                         prefix = custom_prefix,
-                        max_iterations = 3,          
+                        max_iterations = 8,          
                         max_execution_time = 90.0,
                         include_df_in_prompt = False  
                     )
